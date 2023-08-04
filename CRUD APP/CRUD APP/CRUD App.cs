@@ -22,7 +22,7 @@ namespace CRUD_APP
             {
                 string con = "Server=DESKTOP-NCKVTGK\\SQLEXPRESS; Database=CRUD; Integrated Security = true;";
                 SqlConnection cont = new SqlConnection(con);
-                string q = "insert into Traveler values(" + name + "," + address + "," + cellno + "," + email + "," + city + ")";
+                string q = "INSERT INTO Traveler(name,address,cellno,email,city)VALUES('" + name + "','" + address + "','" + cellno + "','" + email + "','" + city + "')";
                 SqlCommand com = new SqlCommand(q, cont);
                 cont.Open();
                 int t = com.ExecuteNonQuery();
